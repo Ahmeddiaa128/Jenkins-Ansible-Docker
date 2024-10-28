@@ -1,6 +1,6 @@
 - name: Install apache on vm3
   hosts: apache_hosts
-  gather_facts: no
+  gather_facts: yes
 
   tasks:
     - name: Install apache server
