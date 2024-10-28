@@ -15,7 +15,7 @@ pipeline {
                 withCredentials([sshUserPrivateKey(credentialsId: 'apache-vm3', keyFileVariable: 'SSH_KEY', usernameVariable: 'SSH_USER')]) {
                     script {
                         sh """
-                        ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook ./Ansible/InstallApache.yml --private-key=$SSH_KEY -i ${DEPLOYG_HOST}
+                        ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook ./Ansible/InstallApache.yml --private-key=$SSH_KEY -i ./Ansible/inventory
                         """
                     }
                 }
