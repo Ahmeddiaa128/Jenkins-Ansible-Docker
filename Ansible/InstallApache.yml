@@ -5,17 +5,17 @@
   tasks:
     - name: Install apache server
       package:
-        name: httpd
+        name: apache2  
         state: present
 
     - name: Start Apache service and enable it on boot
       service:
-        name: httpd
+        name: apache2  
         state: started
         enabled: yes
 
     - name: Check if Apache service is enabled
-      command: systemctl is-enabled httpd
+      command: systemctl is-enabled apache2
       register: apache_enabled
       ignore_errors: true 
 
