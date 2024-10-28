@@ -1,2 +1,2 @@
 [apache_hosts]
-192.168.56.113 ansible_user=ahmedd
+192.168.56.113 ansible_user=ahmedd ansible_python_interpreter=/usr/bin/python3
